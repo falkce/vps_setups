@@ -52,7 +52,19 @@ pip3 show prefect
 ## Login
 Using the API Key we created earlier we can now log in:
 ```bash
-prefect auth login --key <your api key>
+prefect auth login --t <your api key>
+```
+Create a `RUNNER` token so the Prefect Agent can communicate with the Cloud API:
+```bash
+prefect auth create-token -n my-runner-token -s RUNNER
+```
+Save the created token as variable:
+```bash
+export PREFECT__CLOUD__AGENT__AUTH_TOKEN=<COPIED_RUNNER_TOKEN>
+``` 
+Set the backend to talk with the Prefect Cloud:
+```
+prefect backend cloud
 ```
 Start the Prefect Agent:
 ```bash
