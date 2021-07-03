@@ -5,3 +5,4 @@ An overview of basic setups for my VPS running Ubuntu.
 
 ## [Create PostgresDB](docs/create_postgresdb.md)
 ## [Create Django RestAPI](docs/create_django_restapi.md)
+## [Run Prefect Agent](docs/create_prefect_agent.md)
